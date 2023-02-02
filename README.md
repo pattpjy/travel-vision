@@ -63,7 +63,7 @@ Add vdo walk through
 <img width="895" alt="ui draft" src="https://user-images.githubusercontent.com/111454351/216249339-62f36db9-bb46-44fc-979b-f41c12aa7367.png">
 
 ### Architecture
-<img width="264" alt="architect" src="https://user-images.githubusercontent.com/111454351/216252942-6841b07f-8cbe-40ec-a4e2-1b79438d8acc.png">
+<img width="450" alt="architect" src="https://user-images.githubusercontent.com/111454351/216252942-6841b07f-8cbe-40ec-a4e2-1b79438d8acc.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- ROADMAP -->
