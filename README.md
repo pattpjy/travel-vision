@@ -58,26 +58,29 @@ Add vdo walk through
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Planning -->
-##Planning
+## Planning
 ### UI Draft
 <img width="895" alt="Screen Shot 2023-02-01 at 11 31 58 PM" src="https://user-images.githubusercontent.com/111454351/216249339-62f36db9-bb46-44fc-979b-f41c12aa7367.png">
 
-##$ Architecture
+### Architecture
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- ROADMAP -->
 
 ## Roadmap
 
-- [] Need update
-- [] Need update
+- [] As a user, I can add my destination and todo ideas. The trip card with auto generate with an image of destination. I can delete my card from here. 
+      When I click on the image I will see the detail of the trip, and it will close on another click.
+- [] As a user, I can show my trips base on vibes: quiet/city
 
 See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a full list of proposed features (and known issues).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Future Additions
 
-- need update
+- user can add more vibes to the trip
+- user can add their own image
+- Change from single page to multiple page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
