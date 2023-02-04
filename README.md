@@ -69,6 +69,9 @@ Add vdo walk through
 <!-- ROADMAP -->
 
 ## Roadmap
+### user story
+![tripuserstory](https://user-images.githubusercontent.com/111454351/216788952-ce43324c-1bc4-4dae-a6df-89415226a46f.svg)
+
 
 - [] As a user, I can add my destination and todo ideas. The trip card with auto generate with an image of destination. I can delete my card from here. 
       When I click on the image I will see the detail of the trip, and it will close on another click.
