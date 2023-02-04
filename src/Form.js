@@ -10,6 +10,8 @@ class Form extends Component {
       vibe: "",
     };
   }
+  // need to modify showDesList -> showCityList
+
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -17,14 +19,16 @@ class Form extends Component {
     return (
       <div>
         <form>
-          <input
-            className="place"
-            type="text"
-            placeholder="place to go"
-            name="place"
-            value={this.state.place}
-            onChange={(event) => this.handleChange(event)}
-          ></input>
+          <Dropdown
+            formLabel="Choose a service"
+            buttonText="Send form"
+            action="/"
+          >
+            <Option selected value="Click to see options" />
+            <Option value="Option 1" />
+            <Option value="Option 2" />
+            <Option value="Option 3" />
+          </Dropdown>
           <input
             className="todo"
             type="text"
