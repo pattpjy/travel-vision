@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
-import Form from "./Form";
-
-class App extends Component {
+import "./Main.css";
+import Form from "../Form/Form";
+import TripDetails from "../TripDetails/TripDetails";
+import tripIdeas from "../tripIdeasData";
+class Main extends Component {
   constructor() {
     super();
+    this.allIdeas = tripIdeas;
     this.state = {
       destinationData: [],
+      tripIdeas: this.allIdeas,
     };
   }
 
@@ -19,7 +22,7 @@ class App extends Component {
       })
       .catch((error) => console.log("error", error));
   };
-
+  //destination need to connect to the input field in form
   showDestinationList = (allDestination) => {
     return this.state.destinationData.destinations.forEach((el) => {
       const addOption = document.createElement("option");
@@ -27,6 +30,10 @@ class App extends Component {
       addOption.innerText = el.destination;
       // pom.destinationList.appendChild(addOption);
     });
+  };
+  addIdea = (newTrip) => {
+    const addTrip = this.allIdeas.push(newTrip);
+    this.setState({ tripIdea: addTrip });
   };
 
   render() {
@@ -37,11 +44,12 @@ class App extends Component {
         </div>
 
         <div className="right-side">
-          <Form destinationData={this.destinationData} className="form"></Form>
+          <Form destinationData={this.state.destinationData} className="form" />
+          <TripDetails allTripIdeas={this.state.tripIdea} />
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default Main;
