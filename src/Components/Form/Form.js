@@ -7,8 +7,8 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-      placeTogo: "Bangkok",
-      thingsTodo: "Visit floating market",
+      placeTogo: "",
+      thingsTodo: "",
       incompleteForm: true,
 
       //add vibe key pair
