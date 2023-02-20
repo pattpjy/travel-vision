@@ -1,0 +1,13 @@
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: #495057;
+}
+
+.idea-form {
+  display: flex;
+  align-content: center;
+  height: 300px;
+  border: solid 2px black;
+}

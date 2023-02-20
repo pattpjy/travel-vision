@@ -1,0 +1,22 @@
+.main-view {
+  font-family: "Nothing You Could Do", cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+}
+.App {
+  background-color: #2e65d2;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.right-side,
+.left-side {
+  width: 50%;
+}
