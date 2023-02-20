@@ -1,73 +1,68 @@
-import React, { Component } from "react";
 import "./Form.css";
-// import Dropdown from "./Dropdown";
+import React, { useState } from "react";
+import Dropdown from "../Dropdown/Dropdown";
+
 // change to functional component
 
-class Form extends Component {
-  constructor() {
-    super();
-    this.state = {
-      placeTogo: "",
-      thingsTodo: "",
-      incompleteForm: true,
+const Form = (props) => {
+  const [placeTogo, setPlaceTogo] = useState("");
+  const [thingsTodo, setThingsTodo] = useState("");
+  const [incompleteForm, setIncompleteForm] = useState(true);
 
-      //add vibe key pair
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-  // need to modify showDesList -> showCityList
-
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  //submitBtn
-  submitBtn = (event) => {
+  const submitBtn = (event) => {
     event.preventDefault();
     //both input field need to be complete before hit submit
-    if (this.state.placeTogo === "" || this.state.thingsTodo === "") {
-      this.setState({ incompleteForm: true });
+    if (placeTogo === "" || thingsTodo === "") {
+      setIncompleteForm(true);
     } else {
-      this.setState({ incompleteForm: false });
+      setIncompleteForm(false);
       const newTrip = {
         id: Date.now(),
-        ...this.state,
+        placeTogo,
+        thingsTodo,
+        incompleteForm,
       };
-      this.props.addIdea(newTrip);
+      props.addIdeas(newTrip);
+      clearInput();
     }
   };
 
   //ClearInput
-  clearInput = () => {
-    this.setState({ placeTogo: "", thingsTodo: "" });
+  const clearInput = () => {
+    setPlaceTogo("");
+    setThingsTodo("");
   };
   //FormCondition
 
-  render() {
-    return (
-      <div className="idea-form">
-        <form>
-          <input
-            className="place"
-            type="text"
-            placeholder="place I want to go"
-            name="togo"
-            value={this.state.placeTogo}
-            onChange={(event) => this.handleChange(event)}
-          ></input>
-          <input
-            className="todo"
-            type="text"
-            placeholder="things I want to do"
-            name="todo"
-            value={this.state.thingsTodo}
-            onChange={(event) => this.handleChange(event)}
-          ></input>
-          <button className="submit">Add</button>
-        </form>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="idea-form">
+      <form>
+        <Dropdown placeHolder="Select..." />
+        <input
+          className="place"
+          type="text"
+          placeholder="place I want to go"
+          name="placeTogo"
+          value={placeTogo} // this is a problem
+          onChange={(event) => setPlaceTogo(event.target.value)}
+        ></input>
+        <input
+          className="todo"
+          type="text"
+          placeholder="things I want to do"
+          name="thingsTodo"
+          value={thingsTodo}
+          onChange={(event) => setThingsTodo(event.target.value)}
+        ></input>
+        <button className="submit" onClick={submitBtn}>
+          Add
+        </button>
+        {incompleteForm && (
+          <div className="incomplete-form">Please fill all the boxes</div>
+        )}
+      </form>
+    </div>
+  );
+};
 
 export default Form;

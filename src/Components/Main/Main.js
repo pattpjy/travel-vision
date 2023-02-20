@@ -31,9 +31,9 @@ class Main extends Component {
   //     // pom.destinationList.appendChild(addOption);
   //   });
   // };
-  addIdea = (newTrip) => {
-    const addTrip = this.allIdeas.push(newTrip);
-    this.setState({ tripIdea: addTrip });
+  addIdeas = (newTrip) => {
+    const addTrip = [...this.allIdeas, newTrip];
+    this.setState({ tripIdeas: addTrip });
   };
 
   render() {
@@ -43,7 +43,11 @@ class Main extends Component {
           <h2>Where do I want to go??</h2>
         </div>
         <div className="right-side">
-          <Form destinationData={this.state.destinationData} className="form" />
+          <Form
+            destinationData={this.state.destinationData}
+            className="form"
+            addIdeas={this.addIdeas}
+          />
           <TripDetails allTripIdeas={this.state.tripIdeas} />
         </div>
       </div>

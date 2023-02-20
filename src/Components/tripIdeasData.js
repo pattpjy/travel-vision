@@ -3,12 +3,12 @@ const tripIdeas = {
     {
       id: 34576,
       placeTogo: "Bangkok",
-      thingTodo: "Floating Market",
+      thingsTodo: "Floating Market",
     },
     {
       id: 56274,
       placeTogo: "Vietnam",
-      thingTodo: "Hiking",
+      thingsTodo: "Hiking",
     },
   ],
 };
