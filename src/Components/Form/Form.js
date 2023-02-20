@@ -1,9 +1,11 @@
 import "./Form.css";
 import React, { useState } from "react";
-import Dropdown from "../Dropdown/Dropdown";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
+import { stateOptions } from "../tripIdeasData";
 
-// change to functional component
-
+const animatedComponents = makeAnimated();
+console.log(stateOptions[4]);
 const Form = (props) => {
   const [placeTogo, setPlaceTogo] = useState("");
   const [thingsTodo, setThingsTodo] = useState("");
@@ -36,8 +38,14 @@ const Form = (props) => {
 
   return (
     <div className="idea-form">
+      <Select
+        closeMenuOnSelect={false}
+        components={animatedComponents}
+        defaultValue={stateOptions[4]}
+        isMulti
+        options={stateOptions}
+      />
       <form>
-        <Dropdown placeHolder="Select..." />
         <input
           className="place"
           type="text"

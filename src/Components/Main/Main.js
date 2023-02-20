@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Main.css";
 import Form from "../Form/Form";
 import TripDetails from "../TripDetails/TripDetails";
-import tripIdeas from "../tripIdeasData.js";
+import { tripIdeas } from "../tripIdeasData.js";
 
 class Main extends Component {
   constructor() {
